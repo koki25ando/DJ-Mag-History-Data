@@ -1,9 +1,11 @@
-# Global
-
-### Packages
 library(tidyverse)
-library(plotly)
 library(shiny)
+library(shinydashboard)
+library(gghighlight)
+library(DT)
 
-### Dataset Preparation
-DJ.Mag <- read.csv("DJ_Mag.csv")
+##----------- Global script
+
+DJ.Mag <- read.csv("https://s3-ap-southeast-2.amazonaws.com/koki25ando/DJ_Mag.csv")
+DJ.Mag <- DJ.Mag %>% 
+  select(Year:Change)
